@@ -3,81 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Kaike Caboclo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='normalize.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+   
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    <title>Portifólio - Kaike Caboclo</title>
 </head>
 <body>
-    <header class="topo">
-        <div><h1>KAIKE CABOCLO</h1></p></div>
-        <div>CONTATOS</div>
-    </header>
-    
-    <main class="main"> 
-        <div class="introducaoGrid">  
-            <div>
-                <h1>Introdução</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div>
-                <div class="batata">
-                    <p>finge que tem uma foto</p>
-                </div>
-            </div>
-        </div>
 
-        <div>
-            <h2>Currículo</h2>
-            <p>vazio</p>
-        </div>
-        <h2>Projetos</h2>
-        <article class="projetos">
-            <div>
-                <h2>SCRUM ACADEMY</h2>
-                <img class="imagens" src="{{url_for('static', filename='img/imagemProjeto1.png')}}" alt="">
-                <p>Site de curso online sobre Scrum, desenvolvido para iniciantes que desejam compreender os princípios e práticas fundamentais da metodologia ágil Scrum.</p>
+    <header class="topo">
+        <h1>KAIKE CABOCLO</h1>
+        <nav class="menu">
+            <a href="#introducao">Início</a>
+            <a href="#curriculo">Currículo</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#documentos">Trabalhos</a>
+            <a href="#certificacoes">Certificações</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    
+    <main>
+
+        <section id="introducao" class="secao introducao">
+            <div class="intro-texto">
+                <h2>Olá! 👋</h2>
+                <p>Sou <strong>Kaike Caboclo</strong>, estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>. 
+                Tenho interesse em desenvolvimento web e estou construindo este portfólio para reunir meus projetos, habilidades e conquistas acadêmicas. 
+                Meu objetivo é evoluir constantemente e contribuir em equipes que valorizem aprendizado e inovação.</p>
             </div>
-            <div>NADA AQUI</div>
-            <div>NADA AQUI</div>
-        </article>
-        <section>
-             <div>
-                <h2>Habilidades</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div>
-                <h2>Documentos e Trabalhos</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div>
-                <h2>Certificações</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="intro-foto">
+                <div class="foto">[Foto aqui futuramente]</div>
             </div>
         </section>
+
+        <section id="curriculo" class="secao">
+            <h2>Currículo</h2>
+            <p><strong>Formação:</strong> Análise e Desenvolvimento de Sistemas - FATEC (em andamento)</p>
+            <p><strong>Cursos complementares:</strong> Introdução à Programação, Lógica de Algoritmos, HTML/CSS/JS básico.</p>
+            <p><strong>Objetivo:</strong> Adquirir experiência prática em desenvolvimento web e aplicar meus conhecimentos acadêmicos em projetos reais.</p>
+        </section>
+
+        <section id="projetos" class="secao projetos">
+            <h2>Projetos</h2>
+            <div class="grid-projetos">
+
+                <div class="projeto-card">
+                    <h3>SCRUM ACADEMY</h3>
+                    <img src="{{url_for('static', filename='img/imagemProjeto1.png')}}" alt="Projeto Scrum Academy">
+                    <p>Site de curso online sobre Scrum, desenvolvido para iniciantes que desejam compreender os princípios e práticas fundamentais da metodologia ágil Scrum.</p>
+                    <p><strong>Tecnologias:</strong> HTML, CSS, Flask.</p>
+                </div>
+
+                <div class="projeto-card vazio">Em breve...</div>
+                <div class="projeto-card vazio">Em breve...</div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="secao">
+            <h2>Habilidades</h2>
+            <div class="habilidades-grid">
+                <div>
+                    <h3>Habilidades Técnicas</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript básico</li>
+                        <li>Python (iniciante a intermediário)</li>
+                        <li>Flask para aplicações web simples</li>
+                        <li>Git e GitHub</li>
+                        <li>Conhecimento em Scrum</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Comunicação e colaboração em equipe</li>
+                        <li>Resolução de problemas</li>
+                        <li>Proatividade</li>
+                        <li>Organização e responsabilidade</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="documentos" class="secao">
+            <h2>Documentos e Trabalhos</h2>
+            <p>Vazio</p>
+        </section>
+
+        <section id="certificacoes" class="secao">
+            <h2>Certificações</h2>
+            <p>Vazio</p>
+        </section>
+
+        <section id="contato" class="secao contato">
+            <h2>Contato</h2>
+            <ul>
+                <li>Email: <a href="mailto:kaike@example.com">kaike@example.com</a></li>
+                <li>LinkedIn: <a href="#">linkedin.com/in/kaikecaboclo</a></li>
+                <li>GitHub: <a href="#">github.com/kaikecaboclo</a></li>
+            </ul>
+        </section>
+
     </main>
 
+    <footer class="rodape">
+        <p></p>
+    </footer>
+<script src="{{url_for('static', filename='script.sj')}}"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-<!--o Introdução: Breve apresentação sobre você, seus objetivos acadêmicos e o que está buscando com o portfólio.
-
-o Currículo: Resumo de sua formação, cursos e certificações.
-
-o Projetos: Destaque os principais projetos acadêmicos, explicando o problema, sua abordagem, tecnologias utilizadas e os resultados.
-
-o Habilidades: Liste suas principais habilidades técnicas e teóricas (Soft Skills).
-
-o Documentos e Trabalhos: Adicione artigos, TCCs, trabalhos de pesquisa ou relatórios relevantes.
-
-o Certificações: Inclua imagens ou PDFs de certificados obtidos em cursos ou eventos relevantes.
-
-o Contato: Finalize com seus dados de contato, links para LinkedIn, GitHub ou outro canal relevante.-->

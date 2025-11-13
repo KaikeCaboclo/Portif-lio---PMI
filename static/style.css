@@ -1,84 +1,189 @@
-@property --corTema{
-    syntax: "<color>";
-    inherits: false;
-    initial-value:rgb(60,179,113);
+:root {
+    --corTema: rgb(60,179,113);
+    --corFundo: #ffffff;
+    --corTexto: #222;
+    --corClara: #f7f7f7;
 }
 
-body{
-    background-color:white;
+body {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
+    background-color: var(--corFundo);
+    color: var(--corTexto);
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.topo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--corTema);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+.menu{
+    margin-right: 100px;
+}
+.topo h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.8rem;
     font-weight: 600;
-    font-style: normal;
+    transition: 0.3s;
+    padding: 0.2rem;
+    border-radius: 10px;
+}
+
+.menu a:hover {
+    background-color: var(--corClara);
+    color: var(--corTexto);
+}
+
+main {
+    margin-top: 70px;
+}
+
+.secao {
+    padding: 60px 10%;
     text-align: center;
 }
 
-.topo{
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background-color: var(--corTema);
+.secao h2 {
+    color: var(--corTema);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.introducao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.intro-texto {
+    flex: 1 1 350px;
+    text-align: left;
+}
+
+.intro-foto {
+    flex: 0 1 300px;
+}
+
+.foto {
+    background: var(--corTema);
+    color: white;
+    height: 300px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    color: white;
-    padding: 0 2%;
-    z-index: 10;
-}
-    
-.topo h1{
-    font-size: 20;
-}
-
-.topo div{
-    margin-right: 0.2%;
-    margin-left: 0.2%;
-}
-
-.main{
-    padding: 80px 10px;
-}
-
-.introducaoGrid{
-    display: grid;
-    grid-template-columns: 60% 30%;
-    gap:2%;
     justify-content: center;
-
+    border-radius: 12px;
+    font-weight: bold;
 }
 
-.batata{
-    height: 500px;
-    background: var(--corTema);
+.projetos {
+    background-color: var(--corClara);
 }
 
-.projetos{
+.grid-projetos {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     justify-content: center;
-
 }
 
-.projetos div{
-    background: whitesmoke;
-    text-align: center;
-    box-shadow:-10px 10px 5px rgb(60,179,113, 0.5);
-    width: 400px;
-    height: 500px;
-    border-radius: 10px;
-    padding: 10px;
-    transition: transform  0.2s ease;
+.projeto-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 6px 10px rgb(60,179,113, 0.9);
+    transition: transform 0.2s ease;
 }
 
-.projetos div:hover{
+.projeto-card:hover {
     transform: translateY(-5px);
 }
 
-.imagens{
+.projeto-card img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
-    margin-top: 1%;
-    border: 2px black solid;
+    margin-bottom: 10px;
+    border: 2px solid var(--corTema);
+}
+
+.projeto-card.vazio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-style: italic;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20rem;
+    text-align: left;
+    justify-content: center;
+}
+
+.habilidades-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidades-grid li {
+    margin-bottom: 8px;
+}
+
+.contato ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contato a {
+    color: var(--corTema);
+    text-decoration: none;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
+
+.rodape {
+    background-color: var(--corTema);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .introducao {
+        text-align: center;
+    }
+
+    .intro-texto {
+        text-align: center;
+    }
 }
