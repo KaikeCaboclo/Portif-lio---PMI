@@ -30,28 +30,25 @@
 
         <section id="introducao" class="secao introducao">
             <div class="intro-texto">
-                <h2>Olá! 👋</h2>
-                <p>Sou <strong>Kaike Caboclo</strong>, estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>. 
-                Tenho interesse em desenvolvimento web e estou construindo este portfólio para reunir meus projetos, habilidades e conquistas acadêmicas. 
-                Meu objetivo é evoluir constantemente e contribuir em equipes que valorizem aprendizado e inovação.</p>
+                <h2>Olá!</h2>
+                <p>Meu nome é Kaike e atualmente curso Análise e Desenvolvimento de Sistemas. Sou um desenvolvedor em formação com foco em back-end, motivado pela curiosidade e pelo compromisso em criar soluções eficientes e bem estruturadas. Busco aprimorar continuamente minhas habilidades por meio de projetos com aplicações reais, explorando desde a construção de arquiteturas robustas até o uso de tecnologias que aprimorem a qualidade e o desempenho das aplicações. Acredito no valor do trabalho colaborativo, da aprendizagem constante e do desenvolvimento de sistemas que realmente entreguem resultados significativos.</p>
             </div>
             <div class="intro-foto">
-                <div class="foto">[Foto aqui futuramente]</div>
+                <div class="foto"></div>
             </div>
         </section>
 
         <section id="curriculo" class="secao">
             <h2>Currículo</h2>
             <p><strong>Formação:</strong> Análise e Desenvolvimento de Sistemas - FATEC (em andamento)</p>
-            <p><strong>Cursos complementares:</strong> Introdução à Programação, Lógica de Algoritmos, HTML/CSS/JS básico.</p>
-            <p><strong>Objetivo:</strong> Adquirir experiência prática em desenvolvimento web e aplicar meus conhecimentos acadêmicos em projetos reais.</p>
-        </section>
+            <p><strong>Certificações:</strong>Cisco It Essential; Cisco Linux Unhatched</p>
+            <p><strong>Competências Técnicas:</strong> Python, JavaScript, HTML, CSS, SQL, Flask, Git e GitHub</p></section>
 
-        <section id="projetos" class="secao projetos">
+        <section class="secao projetos">
             <h2>Projetos</h2>
-            <div class="grid-projetos">
+            <div id="projetos" class="grid-projetos">
 
-                <div class="projeto-card">
+                <div class="projeto-card" data-detalhes="{{url_for('scrumAcademy')}}">
                     <h3>SCRUM ACADEMY</h3>
                     <img src="{{url_for('static', filename='img/imagemProjeto1.png')}}" alt="Projeto Scrum Academy">
                     <p>Site de curso online sobre Scrum, desenvolvido para iniciantes que desejam compreender os princípios e práticas fundamentais da metodologia ágil Scrum.</p>
@@ -69,11 +66,11 @@
                 <div>
                     <h3>Habilidades Técnicas</h3>
                     <ul>
-                        <li>HTML, CSS, JavaScript básico</li>
-                        <li>Python (iniciante a intermediário)</li>
-                        <li>Flask para aplicações web simples</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Python</li>
+                        <li>Flask</li>
                         <li>Git e GitHub</li>
-                        <li>Conhecimento em Scrum</li>
+                        <li>Metodologia Scrum</li>
                     </ul>
                 </div>
                 <div>
@@ -101,9 +98,9 @@
         <section id="contato" class="secao contato">
             <h2>Contato</h2>
             <ul>
-                <li>Email: <a href="mailto:kaike@example.com">kaike@example.com</a></li>
-                <li>LinkedIn: <a href="#">linkedin.com/in/kaikecaboclo</a></li>
-                <li>GitHub: <a href="#">github.com/kaikecaboclo</a></li>
+                <li>Email: <a href="mailto:kaikelima608@gmail.com">kaikelima608@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/kaike-lima-728a772a6/">www.linkedin.com/in/kaike-lima-728a772a6/</a></li>
+                <li>GitHub: <a href="https://github.com/KaikeCaboclo">github.com/KaikeCaboclo</a></li>
             </ul>
         </section>
 
@@ -112,6 +109,6 @@
     <footer class="rodape">
         <p></p>
     </footer>
-<script src="{{url_for('static', filename='script.sj')}}"></script>
+<script src="{{url_for('static', filename='script.js')}}"></script>
 </body>
 </html>
